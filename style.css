@@ -65,6 +65,9 @@
 .get-my-plan {
     background-color: #8C7BDA;
     color: white;
+    /* width: max-content; */
+    width: -webkit-fill-available;
+    /* border-radius: 50px; */
 }
 
 .info-element {
