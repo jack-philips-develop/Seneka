@@ -5,358 +5,415 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Up Project</title>
+    <style>
+        /* Custom Styles */
 
-</head>
-<style>
-       /* Custom Styles */
+        .website-header {
+            background-color: #F2F0FC;
+        }
 
-    .website-header {
-        background-color: #F2F0FC;
-    }
+        .website-header-button {
+            background-color: #8C7BDA;
+        }
 
-    .website-header-button {
-        background-color: #8C7BDA;
-    }
+        .cursor-pointer {
+            cursor: pointer;
+        }
 
-    .cursor-pointer {
-        cursor: pointer;
-    }
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .card-container-month {
-        color: #8C7BDA;
-    }
+        .card-container-month {
+            color: #8C7BDA;
+        }
 
-    .active-block {
-        width: 40px;
-        height: 8px;
-        border-radius: 15px;
-        background-color: #8C7BDA;
-        margin-right: 3px;
-    }
+        .active-block {
+            width: 40px;
+            height: 8px;
+            border-radius: 15px;
+            background-color: #8C7BDA;
+            margin-right: 3px;
+        }
 
-    .inactive-block {
-        width: 60px;
-        height: 8px;
-        border-radius: 15px;
-        background-color: #F2F0FC;
-        margin-right: 3px;
-    }
+        .inactive-block {
+            width: 60px;
+            height: 8px;
+            border-radius: 15px;
+            background-color: #F2F0FC;
+            margin-right: 3px;
+        }
 
-    .bi-quote {
-        color: #8C7BDA;
-    }
+        .bi-quote {
+            color: #8C7BDA;
+        }
 
-    .inactive-radio-box-month {
-        color: black;
-    }
+        .active-radio-box-month {
+            color: black;
+        }
 
-    .inactive-radio-box-price {
-        color: rgb(104, 104, 104);
-    }
+        .inactive-radio-box-month {
+            color: rgb(104, 104, 104);
+        }
 
-    .radio-box-most-popular {
-        background-color: #8C7BDA;
-        color: white;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
+        .inactive-radio-box-price {
+            color: rgb(104, 104, 104);
+        }
 
-    .get-my-plan {
-        background-color: #8C7BDA;
-        color: white;
-        width: -webkit-fill-available;
-        border-radius: 25px;
-        font-weight: bold;
-    }
+        .radio-box-most-popular {
+            background-color: #8C7BDA;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
 
-    .guarantee {
-        background-color: #eceaea;
-    }
+        .get-my-plan {
+            background-color: #8C7BDA;
+            color: white;
+            width: -webkit-fill-available;
+            border-radius: 15px;
+            font-weight: bold;
+        }
 
-    .testimonials-row {
-        display: flex;
-        overflow-x: auto;
-        gap: 20px;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 10px;
-    }
+        .guarantee {
+            background-color: #eceaea;
+        }
 
-    .testimonial-item {
-        flex: 0 0 auto;
-        width: 300px;
-        min-width: 300px;
-        background-color: #f8f9fa;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 0.5rem;
-        padding: 1rem;
-    }
+        .inactive-radio-box {
+            width: -webkit-fill-available;
+        }
 
-    .testimonials-row::-webkit-scrollbar {
-        height: 8px;
-    }
+        .inactive-radio-option {
+            background-color: #E7E7E7;
+            border: 1px rgb(182, 182, 182) solid;
+        }
 
-    .testimonials-row::-webkit-scrollbar-thumb {
-        background-color: #888;
-        border-radius: 4px;
-    }
+        /* Bootstrap-like Classes */
+        .d-flex {
+            display: flex;
+        }
 
-    .testimonials-row::-webkit-scrollbar-track {
-        background-color: #f1f1f1;
-    }
+        .justify-content-center {
+            justify-content: center;
+        }
 
-    .testimonial-item img {
-        max-width: 100%;
-        height: auto;
-    }
+        .justify-content-between {
+            justify-content: space-between;
+        }
 
-    .testimonial-item div {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
+        .align-items-center {
+            align-items: center;
+        }
 
-    .last-pay-section {
-        background-color: #f8f8fa;
-    }
+        .flex-column {
+            flex-direction: column;
+        }
 
-    .active-radio-box {
-        
-        width: -webkit-fill-available
-    } 
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
 
-    .inactive-radio-box {
-        /* border: white 2px solid; */
-        width: -webkit-fill-available;
-        /* background-color: #f8f9fa; */
-        /* border: rgb(201, 201, 201) 1px solid; */
-    } 
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
 
-       /* Bootstrap-like Classes */
-    .d-flex {
-        display: flex;
-    }
+        .col-lg-4,
+        .col-md-5,
+        .col-sm-12,
+        .col-12 {
+            padding-right: 15px;
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
 
-    .justify-content-center {
-        justify-content: center;
-    }
-
-    .justify-content-between {
-        justify-content: space-between;
-    }
-
-    .align-items-center {
-        align-items: center;
-    }
-
-    .flex-column {
-        flex-direction: column;
-    }
-
-    .flex-wrap {
-        flex-wrap: wrap;
-    }
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-    }
-
-    .col-lg-4,
-    .col-md-5,
-    .col-sm-12,
-    .col-12 {
-        padding-right: 15px;
-        padding-left: 15px;
-        box-sizing: border-box;
-    }
-
-    .col-12 {
-        width: 100%;
-    }
-
-    @media (min-width: 576px) {
-        .col-sm-12 {
+        .col-12 {
             width: 100%;
         }
-    }
 
-    @media (min-width: 768px) {
-        .col-md-5 {
-            width: 41.666667%;
+        @media (min-width: 576px) {
+            .col-sm-12 {
+                width: 100%;
+            }
         }
-    }
 
-    @media (min-width: 992px) {
-        .col-lg-4 {
-            width: 33.333333%;
+        @media (min-width: 768px) {
+            .col-md-5 {
+                width: 41.666667%;
+            }
         }
-    }
 
-    .m-3 {
-        margin: 1rem;
-    }
+        @media (min-width: 992px) {
+            .col-lg-4 {
+                width: 33.333333%;
+            }
+        }
 
-    .mt-1 {
-        margin-top: 0.25rem;
-    }
+        .m-3 {
+            margin: 1rem;
+        }
 
-    .mt-2 {
-        margin-top: 0.5rem;
-    }
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
 
-    .mt-3 {
-        margin-top: 1rem;
-    }
+        .mt-2 {
+            margin-top: 0.5rem;
+        }
 
-    .mt-4 {
-        margin-top: 1.5rem;
-    }
+        .mt-3 {
+            margin-top: 1rem;
+        }
 
-    .mt-5 {
-        margin-top: 3rem;
-    }
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
 
-    .mb-2 {
-        margin-bottom: 0.5rem;
-    }
+        .mt-5 {
+            margin-top: 3rem;
+        }
 
-    .mb-3 {
-        margin-bottom: 1rem;
-    }
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
 
-    .mb-4 {
-        margin-bottom: 1.5rem;
-    }
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
 
-    .mb-5 {
-        margin-bottom: 3rem;
-    }
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
 
-    .mx-0 {
-        margin-left: 0;
-        margin-right: 0;
-    }
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
 
-    .mx-3 {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
+        .mx-0 {
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-    .mx-4 {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+        .mx-3 {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
 
-    .my-3 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+        .mx-4 {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
 
-    .my-5 {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
+        .my-3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
 
-    .px-0 {
-        padding-left: 0;
-        padding-right: 0;
-    }
+        .my-5 {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
 
-    .px-4 {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+        .px-0 {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
-    .py-1 {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-    }
+        .px-4 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
 
-    .py-3 {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
+        .py-1 {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
 
-    .p-2 {
-        padding: 0.5rem;
-    }
+        .py-3 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
 
-    .p-3 {
-        padding: 1rem;
-    }
+        .p-2 {
+            padding: 0.5rem;
+        }
 
-    .me-2 {
-        margin-right: 0.5rem;
-    }
+        .p-3 {
+            padding: 1rem;
+        }
 
-    .me-3 {
-        margin-right: 1rem;
-    }
+        .me-2 {
+            margin-right: 0.5rem;
+        }
 
-    .fw-bold {
-        font-weight: bold;
-    }
+        .me-3 {
+            margin-right: 1rem;
+        }
 
-    .fs-4 {
-        font-size: 1.5rem;
-    }
+        .fw-bold {
+            font-weight: bold;
+        }
 
-    .fs-5 {
-        font-size: 1.25rem;
-    }
+        .fs-4 {
+            font-size: 1.5rem;
+        }
 
-    .fs-6 {
-        font-size: 1rem;
-    }
+        .fs-5 {
+            font-size: 1.25rem;
+        }
 
-    .text-center {
-        text-align: center;
-    }
+        .fs-6 {
+            font-size: 1rem;
+        }
 
-    .text-white {
-        color: #fff;
-    }
+        .text-center {
+            text-align: center;
+        }
 
-    .text-black-50 {
-        color: rgba(0, 0, 0, 0.5);
-    }
+        .text-white {
+            color: #fff;
+        }
 
-    .text-decoration-line-through {
-        text-decoration: line-through;
-    }
+        .text-black-50 {
+            color: rgba(0, 0, 0, 0.5);
+        }
 
-    .rounded {
-        border-radius: 0.25rem;
-    }
+        .text-decoration-line-through {
+            text-decoration: line-through;
+        }
 
-    .rounded-4 {
-        border-radius: 0.5rem;
-    }
+        .rounded {
+            border-radius: 15px;
+        }
 
-    .gap-2 {
-        gap: 0.5rem;
-    }
+        .rounded-4 {
+            border-radius: 15px;
+        }
 
-    .h2 {
-        font-size: 2rem;
-    }
+        .gap-2 {
+            gap: 0.5rem;
+        }
 
-    .h2 {
-        font-size: 2rem;
-    }
+        .h2 {
+            font-size: 2rem;
+        }
 
-    body {
-        font-family: Arial, sans-serif;
-    }
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-</style>
+        input[type='radio'] {
+            width: 20px;
+            height: 20px;
+        }
+
+        input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+        }
+
+        input[type='radio']:checked:after {
+            width: 14.2px;
+            height: 14.2px;
+            border-radius: 15px;
+            top: 0.5px;
+            left: 0.7px;
+            position: relative;
+            background-color: #8C7BDA;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+
+        /* Carousel Container */
+        .testimonials-carousel {
+            position: relative;
+            width: 300px; /* match testimonial-item width */
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        /* Carousel Track */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Carousel Slides */
+        .testimonial-slide {
+            min-width: 100%;
+            /* margin-right: 10px; */
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+
+        /* Navigation Dots */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active-dot {
+            background-color: #8C7BDA;
+        }
+
+        /* Carousel Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(140, 123, 218, 0.8);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 1000;
+        }
+
+        .prev-arrow {
+            left: 10px;
+        }
+
+        .next-arrow {
+            right: 10px;
+        }
+
+        .carousel-arrow:hover {
+            background-color: rgba(140, 123, 218, 1);
+        }
+    </style>
+</head>
+
 <body class="row d-flex justify-content-center mx-0">
     <div class="col-lg-4 col-md-5 col-sm-12 col-12 px-0">
         <div class="website-header rounded rounded-4 p-3 m-3 d-flex justify-content-between">
-
             <div id="timer" class="timer fw-bold fs-4 d-flex align-items-center">9:59</div>
-
             <div
                 class="website-header-button p-2 px-4 rounded rounded-4 text-white align-items-center fw-bold fs-normal cursor-pointer">
                 Get my plan
@@ -364,285 +421,301 @@
         </div>
         <div id="dynamic-content"></div>
         <div>
-        <div class="fs-4 text-center mt-5 fw-bold">
-            Plan for You & Your Child is<br /> ready!
-        </div>
-        <div class="fs-6 text-center mt-4">
-            Your Goal:
-        </div>
-        <div class="fs-5 text-center mt-1 mb-5 fw-bold">
-            <!-- <i class="bi bi-quote h2"></i> -->
-            Help my child understand <br /> that what they’re going <br /> through is normal
-            <!-- <i class="bi bi-quote h2"></i> -->
-        </div>
-
-        <div>
-            <div class="fs-4 text-center fw-bold">
-                Choose your plan
+            <div class="fs-4 text-center mt-5 fw-bold">
+                Plan for You & Your Child is<br /> ready!
             </div>
-            <div class="row d-flex justify-content-center mt-4 flex-column align-items-center mx-4">
-                <!-- Option 1 -->
-                <div class="inactive-radio-box rounded rounded-4 mb-2" 
-">
-                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
-                        <div class="d-flex">
-                            <input class="me-3" type="radio" id="option1" name="pricing-plan" value="option1">
-                            <div>
-                                <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
-                                <div class="d-flex">
-                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$23.51</div>
-                                    <div class="inactive-radio-box-price fs-6">$11.99</div>
+            <div class="fs-6 text-center mt-4">
+                Your Goal:
+            </div>
+            <div class="fs-5 text-center mt-1 mb-5 fw-bold d-flex justify-content-center">
+            <div class="d-flex" style="align-items: start; position: relative; bottom: 10px;">
+            <img src="./oui_quote.png" />
+            </div>
+              <div>  Help my child understand <br /> that what they’re going <br /> through is normal</div>
+                <div class="d-flex" style="align-items: end;position: relative; right: 38px; top: 8px;">
+            <img src="./oui_quote (1).png" />
+                
+            </div>
+            </div>
+
+            <div>
+                <div class="fs-4 text-center fw-bold">
+                    Choose your plan
+                </div>
+                <div class="row d-flex justify-content-center mt-4 flex-column align-items-center mx-4">
+                    <!-- Option 1 -->
+                    <div class="inactive-radio-box rounded rounded-4 mb-2 inactive-radio-option">
+                        <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                            <div class="d-flex">
+                                <input class="me-3" type="radio" id="option1" name="pricing-plan" value="option1">
+                                <div>
+                                    <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
+                                    <div class="d-flex">
+                                        <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$23.51</div>
+                                        <div class="inactive-radio-box-price fs-6">$11.99</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="text-center">
-                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.78</div>
-                            <div class="fs-5 text-center">$0.39</div>
-                            <div class="text-center">per day</div>
+                            <div class="text-center">
+                                <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.78</div>
+                                <div class="fs-5 text-center fw-bold">$0.39</div>
+                                <div class="text-center">per day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 2 (Most popular) -->
+                    <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid; width: -webkit-fill-available;">
+                        <div class="radio-box-most-popular text-center py-1 fw-bold" >Most popular</div>
+                        <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                            <div class="d-flex">
+                                <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
+                                <div>
+                                    <div class="active-radio-box-month fs-5 fw-bold">1 month</div>
+                                    <div class="d-flex">
+                                        <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$58.00</div>
+                                        <div class="inactive-radio-box-price fs-6">$29.99</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                                <div class="fs-5 text-center fw-bold">$0.33</div>
+                                <div class="text-center">per day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 3 -->
+                    <div class="inactive-radio-box inactive-radio-option  rounded rounded-4 mb-2">
+                        <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                            <div class="d-flex">
+                                <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
+                                <div>
+                                    <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
+                                    <div class="d-flex">
+                                        <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$107.82</div>
+                                        <div class="inactive-radio-box-price fs-6">$54.99</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                                <div class="fs-5 text-center fw-bold">$0.30</div>
+                                <div class="text-center">per day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fs-5 p-3 get-my-plan mt-3 text-center" id="get-plan-btn">Get my plan</div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center align-items-center mx-3">
+                <div class="text-center fs-4 mt-5 mb-4 fw-bold">
+                    What you get
+                </div>
+                <div>
+                    <div class="d-flex info-element justify-content-between mb-3 d-flex" style="justify-content: start;">
+                        <div class="me-3">
+                            <img src="./icon1.png" alt="Icon 1" />
+                        </div>
+                        <div>
+                            <div class="fs-5 fw-bold">Both for Kids & Parents</div>
+                            <div class="mt-1">Practical tools for parents & exercises, games and stories for kids</div>
+                        </div>
+                    </div>
+                    <div class="d-flex info-element justify-content-between mb-3 d-flex" style="justify-content: start;">
+                        <div class="me-3">
+                            <img src="./icon4.png" alt="Icon 4" />
+                        </div>
+                        <div>
+                            <div class="fs-5 fw-bold">Proven to work</div>
+                            <div class="mt-1">6 out of 10 exercises are effective, tested by 1,000 families</div>
+                        </div>
+                    </div>
+                    <div class="d-flex info-element justify-content-between mb-3 d-flex" style="justify-content: start;">
+                        <div class="me-3">
+                            <img src="./icon3.png" alt="Icon 3" />
+                        </div>
+                        <div>
+                            <div class="fs-5 fw-bold">Personalized Recommendations</div>
+                            <div class="mt-1">Tailored exercises based on your child’s symptoms, advice from doctors, and other
+                                parents</div>
+                        </div>
+                    </div>
+                    <div class="d-flex info-element justify-content-between mb-3 d-flex" style="justify-content: start;">
+                        <div class="me-3">
+                            <img src="./icon2.png" alt="Icon 2" />
+                        </div>
+                        <div>
+                            <div class="fs-5 fw-bold">Simple and Clear Interface</div>
+                            <div class="mt-1">We understand complex interfaces can cause frustration, so ours was tested by 1,000
+                                families to ensure ease of use</div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Option 2 (Most popular) -->
-                <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid;">
-                    <div class="radio-box-most-popular text-center py-1 fw-bold">Most popular</div>
-                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
-                        <div class="d-flex">
-                            <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
-                            <div>
-                                <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
-                                <div class="d-flex">
-                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$58.00</div>
-                                    <div class="inactive-radio-box-price fs-6">$29.99</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
-                            <div class="fs-5 text-center">$0.33</div>
-                            <div class="text-center">per day</div>
-                        </div>
+            <div class="d-flex flex-column justify-content-center align-items-center mt-5 mx-4">
+                <div class="guarantee rounded rounded-4 p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="fs-5 fw-bold">Money back <br /> guarantee</div>
+                        <img src="./guarantee.png" alt="Guarantee" />
                     </div>
-                </div>
-
-                <!-- Option 3 -->
-                <div class="inactive-radio-box rounded rounded-4 mb-2" >
-                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
-                        <div class="d-flex">
-                            <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
-                            <div>
-                                <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
-                                <div class="d-flex">
-                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$107.82</div>
-                                    <div class="inactive-radio-box-price fs-6">$54.99</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
-                            <div class="fs-5 text-center">$0.30</div>
-                            <div class="text-center">per day</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fs-5 p-3 get-my-plan mt-3 text-center" id="get-plan-btn">Get my plan</div>
-            </div>
-        </div>
-
-        <div class="d-flex flex-column justify-content-center align-items-center mx-3">
-            <div class="text-center fs-4 mt-5 mb-4 fw-bold">
-                What you get
-            </div>
-            <div class="d-flex info-element justify-content-between mb-3">
-                <div class="me-3">
-                    <img src="./icon1.png" />
-                </div>
-                <div>
-                    <div class="fs-5 fw-bold">Both for Kids & Parents</div>
-                    <div class="mt-1">Practical tools for parents & exercises,
-    games and stories for kids</div>
-                </div>
-            </div>
-            <div class="d-flex info-element justify-content-between mb-3">
-                <div class="me-3">
-                    <img src="./icon4.png" />
-                </div>
-                <div>
-                    <div class="fs-5 fw-bold">Proven to work</div>
-                    <div class="mt-1">6 out of 10 exercises are effective, tested
-    by 1,000 families</div>
-                </div>
-            </div>
-            <div class="d-flex info-element justify-content-between mb-3">
-                <div class="me-3">
-                    <img src="./icon3.png" />
-                </div>
-                <div>
-                    <div class="fs-5 fw-bold">Personalized Recommendations</div>
-                    <div class="mt-1">Tailored exercises based on your child’s
-    symptoms, advice from doctors, and other
-                        parents</div>
-                </div>
-            </div>
-            <div class="d-flex info-element justify-content-between mb-3">
-                <div class="me-3">
-                    <img src="./icon2.png" />
-                </div>
-                <div>
-                    <div class="fs-5 fw-bold">Simple and Clear Interface</div>
-                    <div class="mt-1">We understand complex interfaces can cause frustration, so ours was tested by 1,000
-                        families to ensure ease of use</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="d-flex flex-column justify-content-center align-items-center mt-5 mx-4">
-            <div class="guarantee rounded rounded-4 p-3">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="fs-5 fw-bold">Money back <br /> guarantee</div>
-                    <img src="./guarantee.png" />
-                </div>
-                <div class="mt-2">
-                    We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks!
-                    We
-                    are even ready to completely refund you within 30 days after purchase if you don't get visible results.
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center fs-5 mt-5">
-            We helped over
-        </div>
-        <div class="text-center fs-4 mt-1 fw-bold">
-            17000+ families
-        </div>
-
-        <div class="d-flex justify-content-center align-items-center mt-5 mx-3">
-            <div class="testimonials-row">
-                <div class="testimonial-item rounded rounded-4 p-3">
-                    <img src="./stars.png" alt="Stars" />
                     <div class="mt-2">
-                        We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks! We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
-                    </div>
-                    <div class="mt-4 d-flex align-items-center">
-                        <img src="./people.png" class="me-2" alt="Reviewer" />
-                        <div class="text-black-50">kriskris</div>
-                    </div>
-                </div>
-                <div class="testimonial-item rounded rounded-4 p-3">
-                    <img src="./stars.png" alt="Stars" />
-                    <div class="mt-2">
-                        We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks! We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
-                    </div>
-                    <div class="mt-4 d-flex align-items-center">
-                        <img src="./people.png" class="me-2" alt="Reviewer" />
-                        <div class="text-black-50">kriskris</div>
-                    </div>
-                </div>
-                <div class="testimonial-item rounded rounded-4 p-3">
-                    <img src="./stars.png" alt="Stars" />
-                    <div class="mt-2">
-                        We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks! We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
-                    </div>
-                    <div class="mt-4 d-flex align-items-center">
-                        <img src="./people.png" class="me-2" alt="Reviewer" />
-                        <div class="text-black-50">kriskris</div>
+                        We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks!
+                        We
+                        are even ready to completely refund you within 30 days after purchase if you don't get visible results.
                     </div>
                 </div>
             </div>
 
-        </div>
-
-        <div class="mt-5">
-            <div class="fs-4 text-center">
-                Choose your plan
+            <div class="text-center fs-5 mt-5">
+                We helped over
             </div>
-            <div class="row d-flex justify-content-center mt-4 flex-column align-items-center mx-4">
-                <!-- Option 1 -->
-                <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: #eceaea">
-                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
-                        <div class="d-flex">
-                            <input class="me-3" type="radio" id="option1" name="pricing-plan" value="option1">
-                            <div>
-                                <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
-                                <div class="d-flex">
-                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$23.51</div>
-                                    <div class="inactive-radio-box-price fs-6">$11.99</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.78</div>
-                            <div class="fs-5 text-center">$0.39</div>
-                            <div class="text-center">per day</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Option 2 (Most popular) -->
-                <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid;">
-                    <div class="radio-box-most-popular text-center py-1 fw-bold">Most popular</div>
-                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
-                        <div class="d-flex">
-                            <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
-                            <div>
-                                <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
-                                <div class="d-flex">
-                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$58.00</div>
-                                    <div class="inactive-radio-box-price fs-6">$29.99</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
-                            <div class="fs-5 text-center">$0.33</div>
-                            <div class="text-center">per day</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Option 3 -->
-                <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: #eceaea">
-                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
-                        <div class="d-flex">
-                            <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
-                            <div>
-                                <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
-                                <div class="d-flex">
-                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$107.82</div>
-                                    <div class="inactive-radio-box-price fs-6">$54.99</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
-                            <div class="fs-5 text-center">$0.30</div>
-                            <div class="text-center">per day</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-3 text-center">Kindly be aware that your subscription will automatically renew at the conclusion of your selected subscription term. If you wish to manage your subscription, please feel free to reach out to us at support@seneka.team</div>
-                <div class="fs-5 p-3 get-my-plan mt-3 text-center">Get my plan</div>
+            <div class="text-center fs-4 mt-1 fw-bold">
+                17000+ families
             </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center my-3">
-            <img src="./paySafety.png" alt="Payment Safety" />
-        </div>
-        <div class="d-flex gap-2 justify-content-center align-items-center mb-5">
-            <img src="./applePay.png" class="rounded" alt="Apple Pay" />
-            <img src="./googlePay.png" class="rounded" alt="Google Pay" />
-            <img src="./mastercard.png" class="rounded" alt="Mastercard" />
-            <img src="./paypal.png" class="rounded" alt="PayPal" />
-            <img src="./visaIcon.png" class="rounded" alt="Visa" />
+
+            <!-- Updated Testimonials Section: Sliding Carousel -->
+            <div class="d-flex justify-content-center align-items-center mt-5 mx-3">
+                <div class="testimonials-carousel">
+                    <!-- Carousel Track -->
+                    <div class="carousel-track">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-item rounded rounded-4 p-3" style="background-color: #f8f9fa; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                                <img src="./stars.png" alt="Stars" />
+                                <div class="mt-2">
+                                    We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks! We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
+                                </div>
+                                <div class="mt-4 d-flex align-items-center">
+                                    <img src="./people.png" class="me-2" alt="Reviewer" />
+                                    <div class="text-black-50">kriskris</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-item rounded rounded-4 p-3" style="background-color: #f8f9fa; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                                <img src="./stars.png" alt="Stars" />
+                                <div class="mt-2">
+                                    Another testimonial goes here. Share positive experiences from your users to build trust.
+                                </div>
+                                <div class="mt-4 d-flex align-items-center">
+                                    <img src="./people.png" class="me-2" alt="Reviewer" />
+                                    <div class="text-black-50">janedoe</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-item rounded rounded-4 p-3" style="background-color: #f8f9fa; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                                <img src="./stars.png" alt="Stars" />
+                                <div class="mt-2">
+                                    Yet another testimonial. Highlight the benefits and positive outcomes your service provides.
+                                </div>
+                                <div class="mt-4 d-flex align-items-center">
+                                    <img src="./people.png" class="me-2" alt="Reviewer" />
+                                    <div class="text-black-50">johnsmith</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mt-5" style="background-color: #E7E7E7; padding-top: 40px; padding-bottom: 50px;">
+                <div class="fs-4 text-center fw-bold">
+                    Choose your plan
+                </div>
+                <div class="row d-flex justify-content-center mt-4 flex-column align-items-center mx-4">
+                    <!-- Option 1 -->
+                    <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: white; border: 1px rgb(190, 190, 190) solid">
+                        <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                            <div class="d-flex">
+                                <input class="me-3" type="radio" id="option1" name="pricing-plan" value="option1">
+                                <div>
+                                    <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
+                                    <div class="d-flex">
+                                        <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$23.51</div>
+                                        <div class="inactive-radio-box-price fs-6">$11.99</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.78</div>
+                                <div class="fs-5 text-center">$0.39</div>
+                                <div class="text-center">per day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 2 (Most popular) -->
+                    <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid; width: -webkit-fill-available   ;">
+                        <div class="radio-box-most-popular text-center py-1 fw-bold">Most popular</div>
+                        <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                            <div class="d-flex">
+                                <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
+                                <div>
+                                    <div class="active-radio-box-month fs-5 fw-bold">1 month</div>
+                                    <div class="d-flex">
+                                        <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$58.00</div>
+                                        <div class="inactive-radio-box-price fs-6">$29.99</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                                <div class="fs-5 text-center">$0.33</div>
+                                <div class="text-center">per day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Option 3 -->
+                    <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: white; border: 1px rgb(190, 190, 190) solid">
+                        <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                            <div class="d-flex">
+                                <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
+                                <div>
+                                    <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
+                                    <div class="d-flex">
+                                        <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$107.82</div>
+                                        <div class="inactive-radio-box-price fs-6">$54.99</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                                <div class="fs-5 text-center">$0.30</div>
+                                <div class="text-center">per day</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 text-center">Kindly be aware that your subscription will automatically renew at the conclusion of your selected subscription term. If you wish to manage your subscription, please feel free to reach out to us at support@seneka.team</div>
+                    <div class="fs-5 p-3 get-my-plan mt-3 text-center">Get my plan</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <img src="./paySafety.png" alt="Payment Safety" />
+                </div>
+                <div class="d-flex gap-2 justify-content-center align-items-center mb-5">
+                    <img src="./applePay.png" class="rounded" alt="Apple Pay" />
+                    <img src="./googlePay.png" class="rounded" alt="Google Pay" />
+                    <img src="./mastercard.png" class="rounded" alt="Mastercard" />
+                    <img src="./paypal.png" class="rounded" alt="PayPal" />
+                    <img src="./visaIcon.png" class="rounded" alt="Visa" />
+                </div>
+            </div>
         </div>
     </div>
 
@@ -684,11 +757,12 @@
             }
             return `
                 <div class="d-flex justify-content-center align-items-center my-3 mx-3 mb-4">
-                    <div class="card-container align-items-center justify-content-center">
+                    <div class="card-container align-items-center justify-content-center" style="margin-left: 15px">
                         <div class="text-center">Now</div>
                         <div class="row mx-0">
                             <img src="./img1.png" class="mt-4 container-image col-12" alt="Current Status" />
                         </div>
+                        <div>
                         <div class="mt-3">
                             <div>Tantrums</div>
                             <div class="fw-bold">${tantrumFrequency}</div>
@@ -708,16 +782,19 @@
                             <div class="d-flex mt-2">
                                 ${generateBlocks(activeBlocks2, inactiveBlocks2)}
                             </div>
-                        </div>
+                        </div>                            
+                            </div>
+
                     </div>
-                    <div>
+                    <div class="card-container">
                         <div class="text-center card-container-month">
                             In 6 months
                         </div>
                         <div class="row mx-0">
                             <img src="./img2.png" class="mt-4 container-image col-12" alt="Future Status" />
                         </div>
-                        <div class="mt-3">
+                        <div>
+                              <div class="mt-3">
                             <div>Tantrums</div>
                             <div class="fw-bold">Once a month or less</div>
                         </div>
@@ -737,6 +814,7 @@
                                 ${generateBlocks(3, 0)}
                             </div>
                         </div>
+                            </div>
                     </div>
                 </div>
             `;
@@ -788,22 +866,141 @@
             });
         });
 
-        // TESTIMONIALS ROW SCROLLING
+        // TESTIMONIALS CAROUSEL SCRIPT WITH SLIDE IN/OUT EFFECT
         window.onload = function () {
-            const testimonialsRow = document.querySelector('.testimonials-row');
-            let scrollAmount = 0;
-            const scrollSpeed = 1;
+            const carouselTrack = document.querySelector('.carousel-track');
+            const slides = Array.from(carouselTrack.children);
+            const prevButton = document.querySelector('.prev-arrow');
+            const nextButton = document.querySelector('.next-arrow');
+            const dotsNav = document.querySelector('.carousel-dots');
+            const dots = Array.from(dotsNav.children);
+            const slideWidth = slides[0].getBoundingClientRect().width;
 
-            setInterval(function () {
-                testimonialsRow.scrollLeft += scrollSpeed;
+            // Arrange the slides next to one another
+            slides.forEach((slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            });
 
-                if (scrollAmount >= testimonialsRow.scrollWidth - testimonialsRow.clientWidth) {
-                    testimonialsRow.scrollLeft = 0;
-                    scrollAmount = 0;
+            const moveToSlide = (track, currentSlide, targetSlide) => {
+                track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+                currentSlide.classList.remove('active-slide');
+                targetSlide.classList.add('active-slide');
+            };
+
+            const updateDots = (currentDot, targetDot) => {
+                currentDot.classList.remove('active-dot');
+                targetDot.classList.add('active-dot');
+            };
+
+            const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
+                if (targetIndex === 0) {
+                    prevButton.style.display = 'none';
+                    nextButton.style.display = 'block';
+                } else if (targetIndex === slides.length - 1) {
+                    prevButton.style.display = 'block';
+                    nextButton.style.display = 'none';
                 } else {
-                    scrollAmount += scrollSpeed;
+                    prevButton.style.display = 'block';
+                    nextButton.style.display = 'block';
                 }
-            }, 30);
+            };
+
+            // Initially hide the previous button
+            hideShowArrows(slides, prevButton, nextButton, 0);
+
+            let currentSlideIndex = 0;
+            const totalSlides = slides.length;
+            const slideIntervalTime = 5000; // 5 seconds
+            let slideInterval;
+
+            const startSlideShow = () => {
+                slideInterval = setInterval(() => {
+                    const nextIndex = (currentSlideIndex + 1) % totalSlides;
+                    const currentSlide = slides[currentSlideIndex];
+                    const nextSlide = slides[nextIndex];
+                    const currentDot = dots[currentSlideIndex];
+                    const nextDot = dots[nextIndex];
+
+                    moveToSlide(carouselTrack, currentSlide, nextSlide);
+                    updateDots(currentDot, nextDot);
+                    hideShowArrows(slides, prevButton, nextButton, nextIndex);
+
+                    currentSlideIndex = nextIndex;
+                }, slideIntervalTime);
+            };
+
+            const stopSlideShow = () => {
+                clearInterval(slideInterval);
+            };
+
+            startSlideShow();
+
+            // When I click left, move slides to the left
+            prevButton.addEventListener('click', () => {
+                stopSlideShow();
+                const prevIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+                const currentSlide = slides[currentSlideIndex];
+                const prevSlide = slides[prevIndex];
+                const currentDot = dots[currentSlideIndex];
+                const prevDot = dots[prevIndex];
+
+                moveToSlide(carouselTrack, currentSlide, prevSlide);
+                updateDots(currentDot, prevDot);
+                hideShowArrows(slides, prevButton, nextButton, prevIndex);
+
+                currentSlideIndex = prevIndex;
+                startSlideShow();
+            });
+
+            // When I click right, move slides to the right
+            nextButton.addEventListener('click', () => {
+                stopSlideShow();
+                const nextIndex = (currentSlideIndex + 1) % totalSlides;
+                const currentSlide = slides[currentSlideIndex];
+                const nextSlide = slides[nextIndex];
+                const currentDot = dots[currentSlideIndex];
+                const nextDot = dots[nextIndex];
+
+                moveToSlide(carouselTrack, currentSlide, nextSlide);
+                updateDots(currentDot, nextDot);
+                hideShowArrows(slides, prevButton, nextButton, nextIndex);
+
+                currentSlideIndex = nextIndex;
+                startSlideShow();
+            });
+
+            // When I click the nav indicators, move to that slide
+            dotsNav.addEventListener('click', e => {
+                // What indicator was clicked on?
+                const targetDot = e.target.closest('span');
+
+                if (!targetDot) return;
+
+                const targetIndex = dots.findIndex(dot => dot === targetDot);
+                if (targetIndex === currentSlideIndex) return;
+
+                stopSlideShow();
+                const currentSlide = slides[currentSlideIndex];
+                const targetSlide = slides[targetIndex];
+                const currentDot = dots[currentSlideIndex];
+                const newDot = dots[targetIndex];
+
+                moveToSlide(carouselTrack, currentSlide, targetSlide);
+                updateDots(currentDot, newDot);
+                hideShowArrows(slides, prevButton, nextButton, targetIndex);
+
+                currentSlideIndex = targetIndex;
+                startSlideShow();
+            });
+
+            // Handle window resize to adjust slide width
+            window.addEventListener('resize', () => {
+                const newSlideWidth = slides[0].getBoundingClientRect().width;
+                slides.forEach((slide, index) => {
+                    slide.style.left = newSlideWidth * index + 'px';
+                });
+                carouselTrack.style.transform = 'translateX(-' + slides[currentSlideIndex].style.left + ')';
+            });
         };
     </script>
 </body>

@@ -47,6 +47,11 @@
     color: rgb(104, 104, 104);
 }
 
+.active-radio-box-month {
+    color: black;
+}
+
+
 .inactive-radio-box-price {
     color: rgb(104, 104, 104);
 }
