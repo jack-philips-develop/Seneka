@@ -1,0 +1,119 @@
+.website-header {
+    background-color: #F2F0FC;
+}
+
+.website-header-button {
+    background-color: #8C7BDA;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.card-container-month {
+    color: #8C7BDA;
+}
+
+.container-image {
+    /* width: 200px; */
+    /* width: auto; */
+}
+
+.active-block {
+    width: 40px;
+    height: 8px;
+    border-radius: 15px;
+    background-color: #8C7BDA;
+    margin-right: 3px;
+}
+
+.inactive-block {
+    width: 60px;
+    height: 8px;
+    border-radius: 15px;
+    background-color: #F2F0FC;
+    margin-right: 3px;
+}
+
+.bi-quote {
+    color: #8C7BDA;
+}
+
+.inactive-radio-box {
+    /* background-color: #eceaea; */
+}
+
+.inactive-radio-box-month {
+    color: rgb(104, 104, 104);
+}
+
+.inactive-radio-box-price {
+    color: rgb(104, 104, 104);
+}
+
+/* .active-radio-box {
+    border: #8C7BDA 2px solid;
+} */
+
+.radio-box-most-popular {
+    background-color: #8C7BDA;
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.get-my-plan {
+    background-color: #8C7BDA;
+    color: white;
+}
+
+.info-element {
+
+}
+
+.guarantee {
+    background-color: #eceaea;
+}
+
+.testimonials-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 10px; /
+  }
+
+  .testimonial-item {
+    flex: 0 0 auto; 
+    width: 300px; 
+    min-width: 300px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  }
+
+  .testimonials-row::-webkit-scrollbar {
+    height: 8px; 
+  }
+
+  .testimonials-row::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 4px; 
+  }
+
+  .testimonials-row::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  .testimonial-item img {
+    max-width: 100%; 
+    height: auto;
+  }
+
+  .testimonial-item div {
+    font-size: 0.95rem; 
+    line-height: 1.5;
+  }
+
+  .last-pay-section {
+    background-color: #f8f8fa;
+  }

@@ -1,0 +1,477 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="row d-flex justify-content-center mx-0">
+    <div class="col-lg-4 col-md-5 col-sm-12 col-12 px-0">
+        <div class="website-header rounded rounded-4 p-3 m-3 d-flex justify-content-between">
+
+            <div id="timer" class="timer fw-bold fs-4 d-flex align-items-center">9:59</div>
+
+            <div
+                class="website-header-button p-2 px-4 rounded rounded-4 text-white align-items-center fw-bold fs-normal cursor-pointer">
+                Get my plan
+            </div>
+        </div>
+        <div id="dynamic-content"></div>
+        <div>
+        </div class="mt-5">
+        <div class="fs-4 text-center">
+            Plan for You & Your Child is<br /> ready!
+        </div>
+        <div class="fs-6 text-center mt-4">
+            Your Goal:
+        </div>
+        <div class="fs-5 text-center mt-1 mb-5">
+            <!-- <i class="bi bi-quote h2"></i> -->
+            Help my child understand <br /> that what they’re going <br /> through is normal
+            <!-- <i class="bi bi-quote h2"></i> -->
+        </div>
+    
+        <div>
+            <div class="fs-4 text-center">
+                Choose your plan
+            </div>
+            <div class="row d-flex justify-content-center mt-4 flex-column align-items-center mx-4">
+                <!-- Option 1 -->
+                <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: #eceaea">
+                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                        <div class="d-flex">
+                            <input class="me-3" type="radio" id="option1" name="pricing-plan" value="option1">
+                            <div>
+                                <div class="inactive-radio-box-month fs-5">1 month</div>
+                                <div class="d-flex">
+                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$23.51</div>
+                                    <div class="inactive-radio-box-price fs-6">$11.99</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="text-center">
+                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.78</div>
+                            <div class="fs-5 text-center">$0.39</div>
+                            <div class="text-center">per day</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Option 2 (Most popular) -->
+                <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid;">
+                    <div class="radio-box-most-popular text-center py-1 fw-bold">Most popular</div>
+                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                        <div class="d-flex">
+                            <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
+                            <div>
+                                <div class="inactive-radio-box-month fs-5">1 month</div>
+                                <div class="d-flex">
+                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$58.00</div>
+                                    <div class="inactive-radio-box-price fs-6">$29.99</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="text-center">
+                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                            <div class="fs-5 text-center">$0.33</div>
+                            <div class="text-center">per day</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Option 3 -->
+                <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: #eceaea">
+                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                        <div class="d-flex">
+                            <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
+                            <div>
+                                <div class="inactive-radio-box-month fs-5">1 month</div>
+                                <div class="d-flex">
+                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$107.82</div>
+                                    <div class="inactive-radio-box-price fs-6">$54.99</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="text-center">
+                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                            <div class="fs-5 text-center">$0.30</div>
+                            <div class="text-center">per day</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="fs-5 p-3 get-my-plan rounded rounded-4 mt-3 text-center" id="get-plan-btn">Get my plan</div>
+            </div>
+        </div>
+    
+        <div class="d-flex flex-column justify-content-center align-items-center mx-3">
+            <div class="text-center fs-4 mt-5 mb-4">
+                What you get
+            </div>
+            <div class="d-flex info-element justify-content-between mb-3">
+                <div class="me-3">
+                    <img src="./icon1.png" />
+                </div>
+                <div>
+                    <div class="fs-5">Both for Kids & Parents</div>
+                    <div class="mt-1">Practical tools for parents & exercises, games and stories for kids</div>
+                </div>
+            </div>
+            <div class="d-flex info-element justify-content-between mb-3">
+                <div class="me-3">
+                    <img src="./icon4.png" />
+                </div>
+                <div>
+                    <div class="fs-5">Proven to work</div>
+                    <div class="mt-1">6 out of 10 exercises are effective, tested by 1,000 families</div>
+                </div>
+            </div>
+            <div class="d-flex info-element justify-content-between mb-3">
+                <div class="me-3">
+                    <img src="./icon3.png" />
+                </div>
+                <div>
+                    <div class="fs-5">Personalized Recommendations</div>
+                    <div class="mt-1">Tailored exercises based on your child’s symptoms, advice from doctors, and other
+                        parents</div>
+                </div>
+            </div>
+            <div class="d-flex info-element justify-content-between mb-3">
+                <div class="me-3">
+                    <img src="./icon2.png" />
+                </div>
+                <div>
+                    <div class="fs-5">Simple and Clear Interface</div>
+                    <div class="mt-1">We understand complex interfaces can cause frustration, so ours was tested by 1,000
+                        families to ensure ease of use</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="d-flex flex-column justify-content-center align-items-center mt-5 mx-4">
+            <div class="guarantee rounded rounded-4 p-3">
+    
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-5 fw-bold">Money back <br /> guarantee</div>
+                    <img src="./guarantee.png" />
+                </div>
+                <div class="mt-2">
+                    We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks!
+                    We
+                    are even ready to completely refund you within 30 days after purchase if you don't get visible results.
+                </div>
+            </div>
+        </div>
+    
+        <div class="text-center fs-5 mt-5">
+            We helped over
+        </div>
+        <div class="text-center fs-4 mt-1">
+            17000+ families
+        </div>
+    
+        <div class="d-flex justify-content-center align-items-center mt-5 mx-3">
+            <div class="testimonials-row">
+                <div class="testimonial-item rounded rounded-4 p-3">
+                    <img src="./stars.png" alt="Stars" />
+                    <div class="mt-2">
+                        We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks! We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
+                    </div>
+                    <div class="mt-4 d-flex align-items-center">
+                        <img src="./people.png" class="me-2" alt="Reviewer" />
+                        <div class="text-black-50">kriskris</div>
+                    </div>
+                </div>
+                <div class="testimonial-item rounded rounded-4 p-3">
+                    <img src="./stars.png" alt="Stars" />
+                    <div class="mt-2">
+                        We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks! We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
+                    </div>
+                    <div class="mt-4 d-flex align-items-center">
+                        <img src="./people.png" class="me-2" alt="Reviewer" />
+                        <div class="text-black-50">kriskris</div>
+                    </div>
+                </div>
+                <div class="testimonial-item rounded rounded-4 p-3">
+                    <img src="./stars.png" alt="Stars" />
+                    <div class="mt-2">
+                        We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks! We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
+                    </div>
+                    <div class="mt-4 d-flex align-items-center">
+                        <img src="./people.png" class="me-2" alt="Reviewer" />
+                        <div class="text-black-50">kriskris</div>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+    
+          <div class="mt-5">
+            <div class="fs-4 text-center">
+                Choose your plan
+            </div>
+            <div class="row d-flex justify-content-center mt-4 flex-column align-items-center mx-4">
+                <!-- Option 1 -->
+                <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: #eceaea">
+                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                        <div class="d-flex">
+                            <input class="me-3" type="radio" id="option1" name="pricing-plan" value="option1">
+                            <div>
+                                <div class="inactive-radio-box-month fs-5">1 month</div>
+                                <div class="d-flex">
+                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$23.51</div>
+                                    <div class="inactive-radio-box-price fs-6">$11.99</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="text-center">
+                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.78</div>
+                            <div class="fs-5 text-center">$0.39</div>
+                            <div class="text-center">per day</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Option 2 (Most popular) -->
+                <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid;">
+                    <div class="radio-box-most-popular text-center py-1 fw-bold">Most popular</div>
+                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                        <div class="d-flex">
+                            <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
+                            <div>
+                                <div class="inactive-radio-box-month fs-5">1 month</div>
+                                <div class="d-flex">
+                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$58.00</div>
+                                    <div class="inactive-radio-box-price fs-6">$29.99</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="text-center">
+                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                            <div class="fs-5 text-center">$0.33</div>
+                            <div class="text-center">per day</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Option 3 -->
+                <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: #eceaea">
+                    <div class="d-flex align-items-center justify-content-between py-3 px-4">
+                        <div class="d-flex">
+                            <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
+                            <div>
+                                <div class="inactive-radio-box-month fs-5">1 month</div>
+                                <div class="d-flex">
+                                    <div class="inactive-radio-box-price text-decoration-line-through fs-6 me-2">$107.82</div>
+                                    <div class="inactive-radio-box-price fs-6">$54.99</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="text-center">
+                            <div class="inactive-radio-box-price text-decoration-line-through fs-6 text-center">$0.65</div>
+                            <div class="fs-5 text-center">$0.30</div>
+                            <div class="text-center">per day</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="mt-3 text-center">Kindly be aware that your subscription will automatically renew at the conclusion of your selected subscription term. If you wish to manage your subscription, please feel free to reach out to us at support@seneka.team</div>
+                <div class="fs-5 p-3 get-my-plan rounded rounded-4 mt-3 text-center">Get my plan</div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center my-3">
+            <img src="./paySafety.png" />
+        </div>
+        <div class="d-flex gap-2 justify-content-center align-items-center mb-5">
+            <img src="./applePay.png" class="rounded"/>
+            <img src="./googlePay.png" class="rounded"/>
+            <img src="./mastercard.png" class="rounded"/>
+            <img src="./paypal.png" class="rounded"/>
+            <img src="./visaIcon.png" class="rounded"/>
+        </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+
+        //COUNTDOWN
+        let seconds = 599;
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+
+            const formattedMinutes = String(minutes).padStart(2, '0');
+            const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+            timerElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
+
+            if (seconds > 0) {
+                seconds--;
+            } else {
+                clearInterval(timerInterval);
+                console.log("Timer Finished!");
+            }
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+
+        //FIRST COMPARE SECTION
+        
+             // Function to create dynamic content
+             function createDynamicCard(tantrumFrequency, focusTime, activeBlocks1, inactiveBlocks1, activeBlocks2, inactiveBlocks2) {
+            // Helper function to generate block elements dynamically
+            function generateBlocks(activeCount, inactiveCount) {
+                let blocksHTML = '';
+                for (let i = 0; i < activeCount; i++) {
+                    blocksHTML += '<div class="active-block"></div>';
+                }
+                for (let i = 0; i < inactiveCount; i++) {
+                    blocksHTML += '<div class="inactive-block"></div>';
+                }
+                return blocksHTML;
+            }
+            return `
+                <div class="d-flex justify-content-center align-items-center my-3 mx-3 mb-4">
+                    <div class="card-container align-items-center justify-content-center">
+                        <div class="text-center">Now</div>
+                        <div class="row mx-0">
+                            <img src="./img1.png" class="mt-4 container-image col-12" />
+                        </div>
+                        <div class="mt-3">
+                            <div class="">Tantrums</div>
+                            <div class="fw-bold">${tantrumFrequency}</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="">Average focus time</div>
+                            <div class="fw-bold">${focusTime}</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="">Emotional control ability</div>
+                            <div class="d-flex mt-2">
+                                ${generateBlocks(activeBlocks1, inactiveBlocks1)}
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="">Level of socialization</div>
+                            <div class="d-flex mt-2">
+                                ${generateBlocks(activeBlocks2, inactiveBlocks2)}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="text-center card-container-month">
+                            In 6 months
+                        </div>
+                        <div class="row mx-0">
+                            <img src="./img2.png" class="mt-4 container-image col-12" />
+                        </div>
+                        <div class="mt-3">
+                            <div class="">Tantrums</div>
+                            <div class="fw-bold">Once a month or less</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="">Average focus time</div>
+                            <div class="fw-bold">More than 30 minutes</div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="">Emotional control ability</div>
+                            <div class="d-flex mt-2">
+                                ${generateBlocks(3, 0)}
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="">Level of socialization</div>
+                            <div class="d-flex mt-2">
+                                ${generateBlocks(3, 0)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Example usage:
+        const dynamicHTML = createDynamicCard(
+            'A few times a week',  // Tantrum frequency
+            '5-15 minutes',       // Focus time
+            1, 2,                 // Active and inactive blocks for emotional control ability
+            2, 1                  // Active and inactive blocks for socialization
+        );
+
+        document.getElementById('dynamic-content').innerHTML = dynamicHTML;
+
+        //PRICING
+         function handlePlanSelection(plan) {
+            if (plan === 'option1') {
+                alert("You have selected the 1-month plan for $11.99!");
+            } else if (plan === 'option2') {
+                alert("You have selected the most popular plan for $29.99!");
+            } else if (plan === 'option3') {
+                alert("You have selected the premium plan for $54.99!");
+            }
+        }
+
+        document.getElementById('get-plan-btn').addEventListener('click', function () {
+            const selectedPlan = document.querySelector('input[name="pricing-plan"]:checked');
+            if (selectedPlan) {
+                handlePlanSelection(selectedPlan.value);
+            } else {
+                alert("Please select a plan before proceeding.");
+            }
+        });
+
+        document.querySelectorAll('input[name="pricing-plan"]').forEach((radio) => {
+            radio.addEventListener('change', function () {
+                const allRadios = document.querySelectorAll('input[name="pricing-plan"]');
+                allRadios.forEach((rad) => {
+                    const parentDiv = rad.closest('div');
+                    if (rad.checked) {
+                        parentDiv.classList.add('active-radio-box');
+                        parentDiv.classList.remove('inactive-radio-box');
+                    } else {
+                        parentDiv.classList.add('inactive-radio-box');
+                        parentDiv.classList.remove('active-radio-box');
+                    }
+                });
+            });
+        });
+
+        //TESTIMONIALS ROW
+        window.onload = function () {
+    const testimonialsRow = document.querySelector('.testimonials-row');
+    let scrollAmount = 0;
+    const scrollSpeed = 1; 
+
+    setInterval(function () {
+        testimonialsRow.scrollLeft += scrollSpeed;
+        
+        if (scrollAmount >= testimonialsRow.scrollWidth - testimonialsRow.clientWidth) {
+            testimonialsRow.scrollLeft = 0;
+        } else {
+            scrollAmount += scrollSpeed;
+        }
+    }, 30);
+};
+
+    </script>
+</body>
+
+</html>
