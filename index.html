@@ -79,7 +79,7 @@
         }
 
         .guarantee {
-            background-color: #eceaea;
+            background-color: #F8F8FA;
         }
 
         .inactive-radio-box {
@@ -87,8 +87,8 @@
         }
 
         .inactive-radio-option {
-            background-color: #E7E7E7;
-            border: 1px rgb(182, 182, 182) solid;
+            background-color: #FAFAFA;
+            border: 1px #E7E7E7 solid;
         }
 
         /* Bootstrap-like Classes */
@@ -355,12 +355,44 @@
         /* Carousel Slides */
         .testimonial-slide {
             min-width: 100%;
-            /* margin-right: 10px; */
             box-sizing: border-box;
             border-radius: 15px;
+            /* background-color: #F8F8FA; */
         }
 
-        /* Navigation Dots */
+        .active-slide {
+            /* Optional: Add styles for active slide if needed */
+        }
+
+        /* Carousel Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(140, 123, 218, 0.8);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .prev-arrow {
+            left: -25px; /* Adjust as needed */
+        }
+
+        .next-arrow {
+            right: -25px; /* Adjust as needed */
+        }
+
+        .carousel-arrow:hover {
+            background-color: rgba(140, 123, 218, 1);
+        }
+
+        /* Carousel Dots */
         .carousel-dots {
             display: flex;
             justify-content: center;
@@ -380,38 +412,12 @@
         .dot.active-dot {
             background-color: #8C7BDA;
         }
-
-        /* Carousel Arrows */
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(140, 123, 218, 0.8);
-            border: none;
-            color: white;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            z-index: 1000;
-        }
-
-        .prev-arrow {
-            left: 10px;
-        }
-
-        .next-arrow {
-            right: 10px;
-        }
-
-        .carousel-arrow:hover {
-            background-color: rgba(140, 123, 218, 1);
-        }
     </style>
 </head>
 
 <body class="row d-flex justify-content-center mx-0">
     <div class="col-lg-4 col-md-5 col-sm-12 col-12 px-0">
+        <!-- Website Header -->
         <div class="website-header rounded rounded-4 p-3 m-3 d-flex justify-content-between">
             <div id="timer" class="timer fw-bold fs-4 d-flex align-items-center">9:59</div>
             <div
@@ -419,7 +425,11 @@
                 Get my plan
             </div>
         </div>
+
+        <!-- Dynamic Content -->
         <div id="dynamic-content"></div>
+
+        <!-- Plan Ready Section -->
         <div>
             <div class="fs-4 text-center mt-5 fw-bold">
                 Plan for You & Your Child is<br /> ready!
@@ -428,16 +438,16 @@
                 Your Goal:
             </div>
             <div class="fs-5 text-center mt-1 mb-5 fw-bold d-flex justify-content-center">
-            <div class="d-flex" style="align-items: start; position: relative; bottom: 10px;">
-            <img src="./oui_quote.png" />
-            </div>
-              <div>  Help my child understand <br /> that what they’re going <br /> through is normal</div>
-                <div class="d-flex" style="align-items: end;position: relative; right: 38px; top: 8px;">
-            <img src="./oui_quote (1).png" />
-                
-            </div>
+                <div class="d-flex" style="align-items: start; position: relative; bottom: 10px;">
+                    <img src="./oui_quote.png" alt="Quote Start" />
+                </div>
+                <div> Help my child understand <br /> that what they’re going <br /> through is normal</div>
+                <div class="d-flex" style="align-items: end; position: relative; right: 38px; top: 8px;">
+                    <img src="./oui_quote (1).png" alt="Quote End" />
+                </div>
             </div>
 
+            <!-- Choose Your Plan Section -->
             <div>
                 <div class="fs-4 text-center fw-bold">
                     Choose your plan
@@ -467,7 +477,7 @@
 
                     <!-- Option 2 (Most popular) -->
                     <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid; width: -webkit-fill-available;">
-                        <div class="radio-box-most-popular text-center py-1 fw-bold" >Most popular</div>
+                        <div class="radio-box-most-popular text-center py-1 fw-bold">Most popular</div>
                         <div class="d-flex align-items-center justify-content-between py-3 px-4">
                             <div class="d-flex">
                                 <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
@@ -489,7 +499,7 @@
                     </div>
 
                     <!-- Option 3 -->
-                    <div class="inactive-radio-box inactive-radio-option  rounded rounded-4 mb-2">
+                    <div class="inactive-radio-box inactive-radio-option rounded rounded-4 mb-2">
                         <div class="d-flex align-items-center justify-content-between py-3 px-4">
                             <div class="d-flex">
                                 <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
@@ -514,6 +524,7 @@
                 </div>
             </div>
 
+            <!-- What You Get Section -->
             <div class="d-flex flex-column justify-content-center align-items-center mx-3">
                 <div class="text-center fs-4 mt-5 mb-4 fw-bold">
                     What you get
@@ -543,8 +554,7 @@
                         </div>
                         <div>
                             <div class="fs-5 fw-bold">Personalized Recommendations</div>
-                            <div class="mt-1">Tailored exercises based on your child’s symptoms, advice from doctors, and other
-                                parents</div>
+                            <div class="mt-1">Tailored exercises based on your child’s symptoms, advice from doctors, and other parents</div>
                         </div>
                     </div>
                     <div class="d-flex info-element justify-content-between mb-3 d-flex" style="justify-content: start;">
@@ -553,13 +563,13 @@
                         </div>
                         <div>
                             <div class="fs-5 fw-bold">Simple and Clear Interface</div>
-                            <div class="mt-1">We understand complex interfaces can cause frustration, so ours was tested by 1,000
-                                families to ensure ease of use</div>
+                            <div class="mt-1">We understand complex interfaces can cause frustration, so ours was tested by 1,000 families to ensure ease of use</div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Guarantee Section -->
             <div class="d-flex flex-column justify-content-center align-items-center mt-5 mx-4">
                 <div class="guarantee rounded rounded-4 p-3">
                     <div class="d-flex justify-content-between align-items-center">
@@ -568,12 +578,12 @@
                     </div>
                     <div class="mt-2">
                         We believe that our plan will work for you and for your child and you'll get visible results in 4 weeks!
-                        We
-                        are even ready to completely refund you within 30 days after purchase if you don't get visible results.
+                        We are even ready to completely refund you within 30 days after purchase if you don't get visible results.
                     </div>
                 </div>
             </div>
 
+            <!-- Families Helped Section -->
             <div class="text-center fs-5 mt-5">
                 We helped over
             </div>
@@ -581,13 +591,13 @@
                 17000+ families
             </div>
 
-            <!-- Updated Testimonials Section: Sliding Carousel -->
+            <!-- Testimonials Carousel Section -->
             <div class="d-flex justify-content-center align-items-center mt-5 mx-3">
                 <div class="testimonials-carousel">
                     <!-- Carousel Track -->
                     <div class="carousel-track">
                         <!-- Slide 1 -->
-                        <div class="testimonial-slide">
+                        <div class="testimonial-slide active-slide">
                             <div class="testimonial-item rounded rounded-4 p-3" style="background-color: #f8f9fa; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
                                 <img src="./stars.png" alt="Stars" />
                                 <div class="mt-2">
@@ -627,10 +637,20 @@
                         </div>
                     </div>
 
+                    <button class="carousel-arrow prev-arrow" style="display: none;" aria-label="Previous Slide">&#10094;</button>
+                    <button class="carousel-arrow next-arrow" style="display: none;" aria-label="Next Slide">&#10095;</button>
+
+                    <!-- Carousel Dots -->
+                    <div class="carousel-dots" style="display: none;">
+                        <span style="display: none;" class="dot active-dot"></span>
+                        <span style="display: none;" class="dot"></span>
+                        <span style="display: none;" class="dot"></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-5" style="background-color: #E7E7E7; padding-top: 40px; padding-bottom: 50px;">
+            <!-- Second Choose Your Plan Section -->
+            <div class="mt-5" style="background-color: #F8F8FA; padding-top: 40px; padding-bottom: 50px;">
                 <div class="fs-4 text-center fw-bold">
                     Choose your plan
                 </div>
@@ -639,7 +659,7 @@
                     <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: white; border: 1px rgb(190, 190, 190) solid">
                         <div class="d-flex align-items-center justify-content-between py-3 px-4">
                             <div class="d-flex">
-                                <input class="me-3" type="radio" id="option1" name="pricing-plan" value="option1">
+                                <input class="me-3" type="radio" id="option1-second" name="pricing-plan-second" value="option1">
                                 <div>
                                     <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
                                     <div class="d-flex">
@@ -658,11 +678,11 @@
                     </div>
 
                     <!-- Option 2 (Most popular) -->
-                    <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid; width: -webkit-fill-available   ;">
+                    <div class="active-radio-box rounded rounded-4 mb-2 px-0" style="border: #8C7BDA 2px solid; width: -webkit-fill-available;">
                         <div class="radio-box-most-popular text-center py-1 fw-bold">Most popular</div>
                         <div class="d-flex align-items-center justify-content-between py-3 px-4">
                             <div class="d-flex">
-                                <input class="me-3" type="radio" id="option2" name="pricing-plan" value="option2">
+                                <input class="me-3" type="radio" id="option2-second" name="pricing-plan-second" value="option2">
                                 <div>
                                     <div class="active-radio-box-month fs-5 fw-bold">1 month</div>
                                     <div class="d-flex">
@@ -684,7 +704,7 @@
                     <div class="inactive-radio-box rounded rounded-4 mb-2" style="background-color: white; border: 1px rgb(190, 190, 190) solid">
                         <div class="d-flex align-items-center justify-content-between py-3 px-4">
                             <div class="d-flex">
-                                <input class="me-3" type="radio" id="option3" name="pricing-plan" value="option3">
+                                <input class="me-3" type="radio" id="option3-second" name="pricing-plan-second" value="option3">
                                 <div>
                                     <div class="inactive-radio-box-month fs-5 fw-bold">1 month</div>
                                     <div class="d-flex">
@@ -702,7 +722,9 @@
                         </div>
                     </div>
 
-                    <div class="mt-3 text-center">Kindly be aware that your subscription will automatically renew at the conclusion of your selected subscription term. If you wish to manage your subscription, please feel free to reach out to us at support@seneka.team</div>
+                    <div class="mt-3 text-center">
+                        Kindly be aware that your subscription will automatically renew at the conclusion of your selected subscription term. If you wish to manage your subscription, please feel free to reach out to us at support@seneka.team
+                    </div>
                     <div class="fs-5 p-3 get-my-plan mt-3 text-center">Get my plan</div>
                 </div>
                 <div class="d-flex justify-content-center align-items-center my-3">
@@ -763,28 +785,27 @@
                             <img src="./img1.png" class="mt-4 container-image col-12" alt="Current Status" />
                         </div>
                         <div>
-                        <div class="mt-3">
-                            <div>Tantrums</div>
-                            <div class="fw-bold">${tantrumFrequency}</div>
-                        </div>
-                        <div class="mt-4">
-                            <div>Average focus time</div>
-                            <div class="fw-bold">${focusTime}</div>
-                        </div>
-                        <div class="mt-4">
-                            <div>Emotional control ability</div>
-                            <div class="d-flex mt-2">
-                                ${generateBlocks(activeBlocks1, inactiveBlocks1)}
+                            <div class="mt-3">
+                                <div>Tantrums</div>
+                                <div class="fw-bold">${tantrumFrequency}</div>
+                            </div>
+                            <div class="mt-4">
+                                <div>Average focus time</div>
+                                <div class="fw-bold">${focusTime}</div>
+                            </div>
+                            <div class="mt-4">
+                                <div>Emotional control ability</div>
+                                <div class="d-flex mt-2">
+                                    ${generateBlocks(activeBlocks1, inactiveBlocks1)}
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div>Level of socialization</div>
+                                <div class="d-flex mt-2">
+                                    ${generateBlocks(activeBlocks2, inactiveBlocks2)}
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-4">
-                            <div>Level of socialization</div>
-                            <div class="d-flex mt-2">
-                                ${generateBlocks(activeBlocks2, inactiveBlocks2)}
-                            </div>
-                        </div>                            
-                            </div>
-
                     </div>
                     <div class="card-container">
                         <div class="text-center card-container-month">
@@ -794,27 +815,27 @@
                             <img src="./img2.png" class="mt-4 container-image col-12" alt="Future Status" />
                         </div>
                         <div>
-                              <div class="mt-3">
-                            <div>Tantrums</div>
-                            <div class="fw-bold">Once a month or less</div>
-                        </div>
-                        <div class="mt-4">
-                            <div>Average focus time</div>
-                            <div class="fw-bold">More than 30 minutes</div>
-                        </div>
-                        <div class="mt-4">
-                            <div>Emotional control ability</div>
-                            <div class="d-flex mt-2">
-                                ${generateBlocks(3, 0)}
+                            <div class="mt-3">
+                                <div>Tantrums</div>
+                                <div class="fw-bold">Once a month or less</div>
+                            </div>
+                            <div class="mt-4">
+                                <div>Average focus time</div>
+                                <div class="fw-bold">More than 30 minutes</div>
+                            </div>
+                            <div class="mt-4">
+                                <div>Emotional control ability</div>
+                                <div class="d-flex mt-2">
+                                    ${generateBlocks(3, 0)}
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div>Level of socialization</div>
+                                <div class="d-flex mt-2">
+                                    ${generateBlocks(3, 0)}
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-4">
-                            <div>Level of socialization</div>
-                            <div class="d-flex mt-2">
-                                ${generateBlocks(3, 0)}
-                            </div>
-                        </div>
-                            </div>
                     </div>
                 </div>
             `;
@@ -874,38 +895,42 @@
             const nextButton = document.querySelector('.next-arrow');
             const dotsNav = document.querySelector('.carousel-dots');
             const dots = Array.from(dotsNav.children);
-            const slideWidth = slides[0].getBoundingClientRect().width;
+            let slideWidth = slides[0].getBoundingClientRect().width;
 
             // Arrange the slides next to one another
             slides.forEach((slide, index) => {
                 slide.style.left = slideWidth * index + 'px';
             });
 
+            // Function to move to a specific slide
             const moveToSlide = (track, currentSlide, targetSlide) => {
                 track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
                 currentSlide.classList.remove('active-slide');
                 targetSlide.classList.add('active-slide');
             };
 
+            // Function to update the active dot
             const updateDots = (currentDot, targetDot) => {
                 currentDot.classList.remove('active-dot');
                 targetDot.classList.add('active-dot');
             };
 
+            // Function to handle arrow visibility (optional, can be omitted if you want arrows always visible)
             const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
                 if (targetIndex === 0) {
                     prevButton.style.display = 'none';
-                    nextButton.style.display = 'block';
-                } else if (targetIndex === slides.length - 1) {
-                    prevButton.style.display = 'block';
-                    nextButton.style.display = 'none';
                 } else {
                     prevButton.style.display = 'block';
+                }
+
+                if (targetIndex === slides.length - 1) {
+                    nextButton.style.display = 'none';
+                } else {
                     nextButton.style.display = 'block';
                 }
             };
 
-            // Initially hide the previous button
+            // Initially hide the previous button if on first slide
             hideShowArrows(slides, prevButton, nextButton, 0);
 
             let currentSlideIndex = 0;
@@ -913,6 +938,7 @@
             const slideIntervalTime = 5000; // 5 seconds
             let slideInterval;
 
+            // Function to start the slideshow
             const startSlideShow = () => {
                 slideInterval = setInterval(() => {
                     const nextIndex = (currentSlideIndex + 1) % totalSlides;
@@ -929,13 +955,15 @@
                 }, slideIntervalTime);
             };
 
+            // Function to stop the slideshow
             const stopSlideShow = () => {
                 clearInterval(slideInterval);
             };
 
+            // Start the slideshow
             startSlideShow();
 
-            // When I click left, move slides to the left
+            // When clicking the left arrow, move to the previous slide
             prevButton.addEventListener('click', () => {
                 stopSlideShow();
                 const prevIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
@@ -952,7 +980,7 @@
                 startSlideShow();
             });
 
-            // When I click right, move slides to the right
+            // When clicking the right arrow, move to the next slide
             nextButton.addEventListener('click', () => {
                 stopSlideShow();
                 const nextIndex = (currentSlideIndex + 1) % totalSlides;
@@ -969,10 +997,10 @@
                 startSlideShow();
             });
 
-            // When I click the nav indicators, move to that slide
+            // When clicking on a dot, move to the corresponding slide
             dotsNav.addEventListener('click', e => {
-                // What indicator was clicked on?
-                const targetDot = e.target.closest('span');
+                // What dot was clicked on?
+                const targetDot = e.target.closest('.dot');
 
                 if (!targetDot) return;
 
@@ -995,9 +1023,9 @@
 
             // Handle window resize to adjust slide width
             window.addEventListener('resize', () => {
-                const newSlideWidth = slides[0].getBoundingClientRect().width;
+                slideWidth = slides[0].getBoundingClientRect().width;
                 slides.forEach((slide, index) => {
-                    slide.style.left = newSlideWidth * index + 'px';
+                    slide.style.left = slideWidth * index + 'px';
                 });
                 carouselTrack.style.transform = 'translateX(-' + slides[currentSlideIndex].style.left + ')';
             });
